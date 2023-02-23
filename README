@@ -1,3 +1,14 @@
 自动把拷贝PDF时的换行变成空格，用翻译软件的时候再也不会被回车恶心啦！ctrl+c ctr+v爽爽爽！ 就是检测键盘ctrl+c后自动更改剪贴板的内容，把制表换行都变成空格。 PS:命令行内容是日志不需要再从命令行复制一遍，别当傻狗    
 
 Automatically change the newlines when copying PDFs into spaces. It is to automatically change the contents of the clipboard after detecting the keyboard ctrl+c, and turn tabs and newlines into spaces.
+
+V1：
++增加了GUI
++GUI可被收纳到托盘
++增加了开启关闭功能
++增加了ctrl+c的类型判断，只对string类型的进行替换
++增加了更多字符的支持（建议使用Acrobat打开文件）
+
+
+已知问题：
+使用不同软件打开PDF编码不同，MicrosoftEdge支持最差，Chrome次之，最好是Acrobat打开。
