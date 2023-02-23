@@ -11,4 +11,5 @@ V1：
 
 
 已知问题：
-使用不同软件打开PDF编码不同，MicrosoftEdge支持最差，Chrome次之，最好是Acrobat打开。
++使用不同软件打开PDF编码不同，MicrosoftEdge支持最差，Chrome次之，最好是Acrobat打开。
++pyinstaller 打包的时候打包了两次pyqt5导致exe很大
