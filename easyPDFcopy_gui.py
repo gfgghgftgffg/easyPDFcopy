@@ -11,14 +11,18 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import QCoreApplication,Qt
 
+# bundle_dir = getattr(sys, '_MEIPASS', path.abspath(os.path.dirname(__file__)))
+# path_to_yml = os.path.abspath(os.path.join(bundle_dir, 'config.yml'))
+# solve the icon bug, see https://stackoverflow.com/questions/51060894/adding-a-data-file-in-pyinstaller-using-the-onefile-option
+import os,sys
+os.chdir(sys._MEIPASS)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setFixedSize(849, 512)
-        MainWindow.setWindowIcon(QtGui.QIcon("C:\\Users\\heber\\Desktop\\testicon.png"))
-
-
+        MainWindow.setWindowIcon(QtGui.QIcon("./easypdfcopy.png"))
 
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -198,7 +202,7 @@ class TrayIcon(QtWidgets.QSystemTrayIcon):
 
 
  
-        self.setIcon(QtGui.QIcon("C:\\Users\\heber\\Desktop\\testicon.png"))
+        self.setIcon(QtGui.QIcon("./easypdfcopy.png"))
         self.icon = self.MessageIcon()
  
         #把鼠标点击图标的信号和槽连接
